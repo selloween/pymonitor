@@ -25,10 +25,10 @@ def check_site(site):
     except requests.exceptions.RequestException as e:
         status = "***Unknown Error for " + site + ":*** " + "``` " + str(e) + "```"
 
-    return str(status)
+    return status
     
 for site in sites:
     status = check_site(site)
     print(site, str(status))
-    if status is not "200":
-        sendtext(status)
+    if status is not 200:
+        sendtext(str(status))

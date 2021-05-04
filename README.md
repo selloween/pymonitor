@@ -38,10 +38,10 @@ python monitor.py
 ```
 
 ### Setup a Cronjob
-Setup a cronjob that runs the script every minute.(Change script location accordingly)
+Setup a cronjob that runs the script every 5 minutes.(Change script location accordingly)
 Edit `/etc/crontab` and add following Line:
 ```
-* * * * * root python /opt/telegram-site-monitor-bot/monitor.py
+*/5 * * * * root python /opt/telegram-site-monitor-bot/monitor.py
 ```
 
 
