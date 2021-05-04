@@ -12,7 +12,10 @@ def sendtext(message):
 def check_site(site):
     try:
         response = requests.get(site, timeout=3)
-        status = "***HTTP Status for " + site + ":*** " + "``` " + str(response.status_code) + "```"
+        if response.status_code == 200:
+            status = 200
+        else:
+            status = "***HTTP Status for " + site + ":*** " + "``` " + str(response.status_code) + "```"
     except requests.exceptions.HTTPError as e:
         status = "***HTTP Error for " + site + ":*** " + "``` " + str(e) + "```"
     except requests.exceptions.ConnectionError as e:
@@ -22,7 +25,7 @@ def check_site(site):
     except requests.exceptions.RequestException as e:
         status = "***Unknown Error for " + site + ":*** " + "``` " + str(e) + "```"
 
-    return str(status )
+    return str(status)
     
 for site in sites:
     status = check_site(site)
