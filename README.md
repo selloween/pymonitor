@@ -37,7 +37,7 @@ clients = {
 **Example JSON Responce:**
 ```json
 chat: {
-  id: XXXXXXXXX,
+  id: "XXXXXXXXX",
   title: "my_group_name",
   type: "group",
 }
@@ -68,5 +68,5 @@ python monitor.py
 Setup a cronjob that runs the script every 5 minutes.(Change script location accordingly)
 Edit `/etc/crontab` and add following Line:
 ```
-*/5 * * * * root python /opt/telegram-site-monitor-bot/monitor.py
+*/5 * * * * root python /opt/sitemap/monitor.py
 ```
