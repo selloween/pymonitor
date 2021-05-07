@@ -37,9 +37,9 @@ clients = {
 **Example JSON Responce:**
 ```json
 chat: {
-  id: "XXXXXXXXX",
-  title: "my_group_name",
-  type: "group",
+  "id": "XXXXXXXXX",
+  "title": "my_group_name",
+  "type": "group"
 }
 ```
 
