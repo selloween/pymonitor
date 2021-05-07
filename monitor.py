@@ -11,7 +11,7 @@ def sendtext(message):
 
 def check_site(site):
     try:
-        response = requests.get(site, timeout=3)
+        response = requests.get(site, timeout=5)
         if response.status_code == 200:
             status = 200
         else:
