@@ -75,4 +75,4 @@ def main():
 
             send_message(str(status))
 
-send_message("Tuxbot Teams Test")
+main()
