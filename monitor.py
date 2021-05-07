@@ -1,5 +1,4 @@
 import requests
-import logging
 from config import token, chat_id, sites
 
 def sendtext(message):
